@@ -1,4 +1,5 @@
 const db = require('../database/models');
+const userController = require('./userController');
 const sequelize = db.sequelize;
 
 const controller = {

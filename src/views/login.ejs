@@ -6,7 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logueate</title>
 </head>
+        <%- include('./partials/header.ejs') %>
 <body>
-    <h1>login</h1>
+    <main>
+        <form class="create-form-login" action="/user/login" method="post">
+            <label for="email">Email: </label>
+            <p><input class="imail" type="mail" name="email" id="" ></p>
+            <% if (locals.errors && errors.email) { %>
+                <p style = "color: red"><%- errors.email.msg  %></p>
+            <% } %>   
+            <label for="password">Password: </label>
+            <p><input class="contraseña" type="password" name="password" id="" > </p>
+            <% if (locals.errors && errors.password) { %>
+                <p style = "color: red"><%- errors.password.msg  %></p>
+            <% } %>   
+            <br>
+            <p> <button class="botonAgregar" type="submit">Login</button>
+        </form>
+    </main>
+    <script src="/js/login.js"></script>
 </body>
 </html>

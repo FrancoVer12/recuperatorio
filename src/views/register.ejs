@@ -7,6 +7,27 @@
     <title>Registrate</title>
 </head>
 <body>
-    <h1>Registro</h1>
+    <main>
+        <form class="form-create-register" action="/user/register" method="POST">
+            <label for="name">Nombre: </label>
+            <p><input class="neim" type="text" name="name" id="" ></p>
+            <% if (locals.errors && errors.name) { %>
+                <p style = "color: red"><%- errors.name.msg  %></p>
+            <% } %>     
+            <label for="email">Email: </label>
+            <p><input class="correo" type="mail" name="email" id="" > </p>
+            <% if (locals.errors && errors.email) { %>
+                <p style = "color: red"><%- errors.email.msg  %></p>
+            <% } %>   
+            <label  for="password">Password: </label>
+            <p><input class="pasguor" type="password" name="password" id="" ></p>
+            <% if (locals.errors && errors.password) { %>
+                <p style = "color: red"><%- errors.password.msg  %></p>
+            <% } %> 
+            <br>
+            <p> <button class="botonAgregar" type="submit">Registrate</button>
+        </form>
+    </main>
+    <script src="/js/register.js"></script>
 </body>
 </html>
