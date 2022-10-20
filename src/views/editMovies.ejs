@@ -12,7 +12,7 @@
     
     <h1 class="titulo">Película a Editar:  <%= Movie.title %></h1>
     <section class="formulario">
-        <form action="/movies/update/<%= Movie.id %>?_method=PUT" method="POST" >
+        <form action="/admin/edit/<%= Movie.id %>?_method=PUT" method="POST" >
             <label for="title">Title </label>
             <p><input type="text" name="title" id="title" value="<%= Movie.title %>" required></p>
             <label for="rating">Rating </label>
@@ -26,9 +26,9 @@
             <br>
             <p> <button class="botonAgregar" type="submit">Actualizar</button>
         
-            <a  class="botonVolver" href="/movies">Listado de Películas</a></p>
-            <a href="/movies/detail/<%= Movie.id %>">Detalle</a>
-            <a href="/movies/delete/<%= Movie.id %>">Eliminar</a>
+            <a  class="botonVolver" href="/">Listado de Películas</a></p>
+            <a href="/admin/detail/<%= Movie.id %>">Detalle</a>
+            <a href="/admin/delete/<%= Movie.id %>">Eliminar</a>
         </form>
     </section>
 </body>

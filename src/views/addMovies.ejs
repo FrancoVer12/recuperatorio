@@ -9,29 +9,44 @@
 </head>
 
 <body>
-    
+    <main>
     <h1 class="titulo">Agregar Película</h1>
     <br>
-    <section class="formulario">
-        <form action="/movies/create" method="POST">
+        <form class="form-create" action="/admin/create" method="POST">
             <label for="title">Title </label>
-            <p><input type="text" name="title" id="" required></p>
+            <p><input class="titulo1" type="text" name="title" id="" ></p>
+            <!--<% if (locals.errors && errors.title) { %>
+                <p style = "color: red"><%- errors.title.msg  %></p>
+            <% } %>-->   
             <label for="rating">Rating </label>
-            <p><input type="number" name="rating" id="" required> </p>
+            <p><input class="reitin" type="number" name="rating" id="" > </p>
+           <!-- <% if (locals.errors && errors.rating) { %>
+                <p style = "color: red"><%- errors.rating.msg  %></p>
+            <% } %>-->    
             <label for="awards">Awards </label>
-            <p><input type="number" name="awards" id="" required></p>
+            <p><input class="premios" type="number" name="awards" id="" ></p>
+            <!--<% if (locals.errors && errors.awards) { %>
+                <p style = "color: red"><%- errors.awards.msg  %></p>
+            <% } %>   -->
             <label for="release_date">Release date </label>
-            <p><input type="date" name="release_date" id="" required></p>
+            <p><input class="fecha" type="date" name="release_date" id="" ></p>
+            <!--<% if (locals.errors && errors.release_date) { %>
+                <p style = "color: red"><%- errors.release_date.msg  %></p>
+            <% } %>    -->
             <label for="length">Length </label>
-            <p><input type="number" name="length" id="" required></p>
-
+            <p><input class="duracion" type="number" name="length" id="" ></p>
+            <!--<% if (locals.errors && errors.length) { %>
+                <p style = "color: red"><%- errors.length.msg  %></p>
+            <% } %>   --> 
             <br>
             <p> <button class="botonAgregar" type="submit">Agregar</button>
             
-            <a  class="botonVolver" href="/movies">Listado de Películas</a></p>
+            <a  class="botonVolver" href="/">Listado de Películas</a>
+        </p>
         </form>
     </section>
-    
+</main>
+<!--aca el script-->
 </body>
 
 </html>

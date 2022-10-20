@@ -33,11 +33,11 @@ app.use(acceso);
 
 const router = require('./routes/mainRouter');
 const userRoutes = require('./routes/usersRoutes');
-//const adminRoutes = require('./routes/adminRoutes')
+const adminRoutes = require('./routes/adminRoutes')
 
 app.use('/', router)
 app.use('/user', userRoutes);
-//app.use('/admin', adminRoutes)
+app.use('/admin', adminRoutes)
 
 
 

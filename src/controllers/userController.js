@@ -14,7 +14,7 @@ const userController = {
             })
     },
     'login': (req, res) => {
-        if(req.session.user){
+        if(req.session.usuario){
             res.redirect('/')
 
         }else{
@@ -22,7 +22,7 @@ const userController = {
         }
     },
     'register': (req, res) => {
-        if(req.session.user){
+        if(req.session.usuario){
             res.redirect('/')
 
         }else{
